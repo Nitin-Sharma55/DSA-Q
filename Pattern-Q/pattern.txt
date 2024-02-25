@@ -1,6 +1,6 @@
 Hiii, 
 WHY do we need to do these questions?
-Ans => These pattern question helps us to build logic, we get to know how the loops work and it make us familiar with getting a desired output using a specific Condition.
+=> These pattern question helps us to build logic, we get to know how the loops work and it make us familiar with getting a desired output using a specific Condition.
  
 
 Lets dive into the problems -
@@ -62,7 +62,7 @@ Lets dive into the problems -
     *********
 
 
-9.   *********
+9.  *********
      *******
       *****
        ***
