@@ -1,7 +1,6 @@
 
 SELECTION SORT :-
-   => Selection sort is another sorting technique in which we find the minimum element in every iteration n
-
+   => 
    Selection sort as the name suggest basically it means we will select an element and put it in the right position/correct index.
 
    Suppose we have a array :-
