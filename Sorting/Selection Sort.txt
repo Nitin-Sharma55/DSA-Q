@@ -54,7 +54,8 @@ Use case => It performs well in small lists/ arrays.
 
 So Selection sort first finds the largest element in the array and then swap it at its correct position. And as bubble sort in this also the inner loop will iterate till j<arr.length-i; as after the first sort we have the largest element at the last index so we need not to compare it. 
 
-// code for Selection Sort 
+// code for Selection Sort
+// In this we took the largest element and then swapped
 
  int arr[]={4,5,1,2,3};
     int i,j;
