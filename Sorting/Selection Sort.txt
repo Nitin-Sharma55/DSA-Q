@@ -1,0 +1,75 @@
+
+SELECTION SORT :-
+   => Selection sort is another sorting technique in which we find the minimum element in every iteration n
+
+   Selection sort as the name suggest basically it means we will select an element and put it in the right position/correct index.
+
+   Suppose we have a array :-
+
+   0 1 2 3 4 => index 
+
+   4 5 1 2 3 => element 
+
+   Step 1: we will select the largest element in the array that is 5 and swap it from the element present at the last index. 
+
+   new array :-
+
+   0 1 2 3 4  => index
+
+   4 3 1 2 5 => elements
+
+   step 2: we will select the largest element but only from the unsorted part that means from 0th index to the second last index as we know that element at our last index is the greatest.
+
+   new large element => 4 
+   swap it from the element present at the second last index 
+
+   0 1 2 3 4 => index
+
+   2 3 1 4 5 => elements
+
+   Step 3: 
+
+   new large element => 3 
+   swap it with the element at the 2nd index
+
+   0 1 2 3 4 => index
+
+   2 1 3 4 5 => elements 
+
+   Step 4: 
+
+   new large element => 2 
+   swap it with element at the 1st index
+
+   0 1 2 3 4 => index
+
+   1 2 3 4 5 => elements // Sorted array 
+
+
+Time complexity of selection sort => O(N^2), N => number of comparsion 
+
+Space complexity => O(1), as no extra space is used.
+
+Use case => It performs well in small lists/ arrays.
+
+So Selection sort first finds the largest element in the array and then swap it at its correct position. And as bubble sort in this also the inner loop will iterate till j<arr.length-i; as after the first sort we have the largest element at the last index so we need not to compare it. 
+
+// code for Selection Sort 
+
+ int arr[]={4,5,1,2,3};
+    int i,j;
+
+    for(i=0;i<arr.length;i++){
+        int max=i;
+        for(j=i+1;j<arr.length;j++){
+            if(arr[max]>arr[j]){
+            max=j;
+        }
+    }
+    int temp = arr[max];
+    arr[max]=arr[i];
+    arr[i]=temp;
+}
+for(i=0;i<arr.length;i++){
+    System.out.println(arr[i]);
+}
