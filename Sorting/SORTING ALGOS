@@ -1,0 +1,115 @@
+What sorting means is to arrange the elements either in a ascending order or an descending order.
+
+Why sorting is important ?
+=>Suppose we have a large amount of data, it would be so difficult to deal with it especially when its arranged randomly, So we sort the array to make our searching easier.
+
+Sorting are of two types:-
+
+1. Comparision-based sorting => This is done by comparing the elements with each other
+   Like in :
+   Bubble Sort
+   Insertion Sort
+   Selection Sort
+   Quick sort
+   Merge Sort
+   Heap Sort
+
+2. Non-comparision-based => we don't compare the elements in a non-comparision based sorting.
+   Like in:-
+   Counting Sort
+   Radix Sort
+
+3. Bubble sort Algorithm :-
+   Bubble Sort is the simplest sorting algorithm that works repeatedly swapping the adjacent elements if they are in the wrong order.
+   This algo is not suitable for large data sets as its average and worst-case time complexity is quite high.
+
+   Its is also known as sinking sort and exchange sort
+
+Suppose we have a array :-
+
+    0 1 2 3 4 => index
+
+    3 1 5 4 2 => elements
+
+First pass:-
+
+Step 1:- we will check if the element in the 0th index is greater than the element in the 1st index
+=> yes it is greater so now our array would be.
+
+0 1 2 3 4 => index
+
+1 3 5 4 2 => new array
+
+Step 2:- we will check if the element in the 1st index is greater than the element at the 2nd index.
+=> No it is not greater so now our array would be.
+
+0 1 2 3 4 => index
+
+1 3 5 4 2 => elements
+
+Step 3:- we will now check if the element at the 2nd index(5) is greater than the element at the 3rd index(4)
+=> yes it is so now our new array would be
+
+0 1 2 3 4 => index
+
+1 3 4 5 2 => elements
+
+step 4:- now we will check if the element at the 3rd index(5) is greater than the element at the 4th index(2)
+=> yes it is so now our new array would be
+
+0 1 2 3 4 => index
+
+1 3 4 2 5 => elements
+
+Why bubble sort :-
+because as you can see in the first pass through the array, the largest element came to the end this means we dont need to compare now the whole array we need only to compare till the second last element,
+
+Not understood, No problem let's move to the second pass
+
+second pass :-
+
+    0 1 2 3 4 => index
+
+    1 3 4 2 5 => elements
+
+second pass step 1 => we will check if the element at the 0th index(1) is greater than the element at the 1st index(3)
+=> no it is not so our array would remain the same
+
+    0 1 2 3 4 => index
+
+    1 3 4 2 5 => elements
+
+second pass step 2 => check if the element at the 1st index(3) is greater than the element at the 2nd index(4)
+=> no it is not so our array would remain the same
+
+    0 1 2 3 4 => index
+
+    1 3 4 2 5 => elements
+
+second pass step 3 => check if the element at the 2th index(4) is greater than the element at the 3rd index(2)
+=> Yes it is so our array would remain the same
+
+0 1 2 3 4 => index
+
+1 3 2 4 5 => elements
+
+now we know that our last element is the largest from our first pass so we don't need to compare we that array
+
+What did we understand with this, we understood that after the first pass the inner loop should only iterate till j<length-i
+As after the first pass(i=1) the element at the last index becomes the greatest element and after the second pass(i=2) the element at the second last becomes the second largest element and so on.
+
+Space complexity of bubble sort => 0(1) => this means no extra space is used
+
+Time complexity => worst case : 0(N^2) => N means no. of comparisons, if you have array of 1000 elements it will take about 1000 comparisons
+
+//code for bubble sort
+int arr[]={3,1,5,4,2};
+for(int i=1;i<=arr.length;i++){
+for(int j=1;j<arr.length-i;j++){
+if(arr[j] > arr[j+1]){
+int temp=arr[j];
+arr[j]=arr[j+1];
+arr[j+1]=temp;
+}
+}
+}
